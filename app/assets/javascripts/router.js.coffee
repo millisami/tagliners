@@ -19,13 +19,6 @@ App.IndexRoute = Ember.Route.extend
   setupController: (controller, model) ->
     @controllerFor('application').set('currentRoute', 'home')
 
-App.UsersShowRoute = Ember.Route.extend
-  model: (params) ->
-    App.User.find(params.user_id)
-  setupController: (controller, model) ->
-    controller.set('content', model)
-    @controllerFor('application').set('currentRoute', 'users')
-
 App.UsersRoute = Ember.Route.extend
   model: ->
     App.User.find()
@@ -33,10 +26,26 @@ App.UsersRoute = Ember.Route.extend
     controller.set('content', model)
     @controllerFor('application').set('currentRoute', 'users')
 
-App.UsersNewRoute = App.UsersRoute.extend
+App.UsersNewRoute = Ember.Route.extend
   model: ->
     App.User.createRecord()
   setupController: (controller, model) ->
     controller.set('content', model)
 
+App.UsersShowRoute = Ember.Route.extend
+  model: (params) ->
+    App.User.find(params.user_id)
+  setupController: (controller, model) ->
+    controller.set('content', model)
+    @controllerFor('application').set('currentRoute', 'users')
+
+App.UsersEditRoute = Ember.Route.extend
+  model: (params) ->
+    App.User.find(params.user_id)
+  setupController: (controller, model) ->
+    controller.set('content', model)
+    @controllerFor('application').set('currentRoute', 'users')
+
+# App.UsersShowRoute = App.UserRoute.extend
+# App.UsersEditRoute = App.UserRoute.extend
 
