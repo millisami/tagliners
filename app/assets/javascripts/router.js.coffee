@@ -11,6 +11,9 @@ App.Router.map ->
   @resource 'users', ->
     @route 'show',
       path: '/:user_id'
+    @route 'new'
+    @route 'edit',
+      path: '/:user_id/edit'
 
 App.IndexRoute = Ember.Route.extend
   setupController: (controller, model) ->
@@ -29,3 +32,11 @@ App.UsersRoute = Ember.Route.extend
   setupController: (controller, model) ->
     controller.set('content', model)
     @controllerFor('application').set('currentRoute', 'users')
+
+App.UsersNewRoute = App.UsersRoute.extend
+  model: ->
+    App.User.createRecord()
+  setupController: (controller, model) ->
+    controller.set('content', model)
+
+
