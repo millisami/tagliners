@@ -15,6 +15,8 @@ App.Router.map ->
     @route 'edit',
       path: '/:user_id/edit'
 
+  @resource 'achievements'
+
 App.IndexRoute = Ember.Route.extend
   setupController: (controller, model) ->
     @controllerFor('application').set('currentRoute', 'home')

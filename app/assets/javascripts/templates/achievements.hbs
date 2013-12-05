@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="left">Lists</div>
+  <div class="right">
+    <form>
+      <p>
+        {{input type=text}}
+      </p>
+      <p><button>Add</button></p>
+    </form>
+
+    <h3>Achievements</h3>
+    <hr />
+    <ul>
+      {{#each controller}}
+      {{else}}
+        <li>There are no achievements</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
