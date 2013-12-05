@@ -1,0 +1,18 @@
+<div class="span3">
+  <table class='table table-striped'>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+    {{#each controller}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{#linkTo "users.show" this}}{{fullName}}{{/linkTo}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+
+<div class="span8">
+  {{outlet}}
+</div>

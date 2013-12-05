@@ -7,4 +7,4 @@
 #= require tagliners
 
 # for more details see: http://emberjs.com/guides/application/
-window.Tagliners = Ember.Application.create()
+window.App = Ember.Application.create()
