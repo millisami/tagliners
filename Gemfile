@@ -29,4 +29,5 @@ gem 'handlebars_assets', '0.12.3'
 
 group :development do
   gem 'quiet_assets'
+  gem 'qunit-rails'
 end
