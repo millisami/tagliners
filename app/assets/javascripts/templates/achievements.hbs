@@ -12,6 +12,9 @@
     <hr />
     <ul>
       {{#each controller}}
+        <li>
+          <span>{{ date achievedAt }}</span> {{title}}
+        </li>
       {{else}}
         <li>There are no achievements</li>
       {{/each}}

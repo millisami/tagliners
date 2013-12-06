@@ -15,6 +15,7 @@ Tagliners::Application.routes.draw do
   end
 
   resources :users, :except => :edit, :constraints => FormatTest.new(:json)
+  resources :achievements, constraints: FormatTest.new(:json)
   get '*foo', :to => 'application#index', :constraints => FormatTest.new(:html)
   get '/', :to => 'application#index', :constraints => FormatTest.new(:html)
 
