@@ -1,11 +1,7 @@
-# For more information see: http://emberjs.com/guides/routing/
 
-# Tagliners.Router.map ()->
-#   # @resource('posts')
-
-App.Router.reopen
-  location: 'history'
-  rootURL: '/'
+# App.Router.reopen
+#   location: 'history'
+#   rootURL: '/'
 
 App.Router.map ->
   @resource 'users', ->
