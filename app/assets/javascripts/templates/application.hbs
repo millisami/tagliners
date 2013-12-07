@@ -20,6 +20,11 @@
   <div class='content'>
     <div class='row'>
       <div class='span12'>
+        {{#view App.FlashView id="flash-view"}}
+          <div id="message">
+            {{view.content.message}}
+          </div>
+        {{/view}}
         <div class='page-header'></div>
         {{outlet}}
       </div>
