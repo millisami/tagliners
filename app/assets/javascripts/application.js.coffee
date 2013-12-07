@@ -4,6 +4,7 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require ember-simple-auth
 #= require_self
 #= require tagliners
 
