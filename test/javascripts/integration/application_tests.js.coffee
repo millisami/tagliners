@@ -7,3 +7,4 @@ module "EmberJS Application Template",
 test "default template", ->
   visit("/").then ->
     ok exists("*"), "Found Some HTML"
+

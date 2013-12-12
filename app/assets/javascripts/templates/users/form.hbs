@@ -2,7 +2,12 @@
 <form>
   <fieldset>
     <div>
-      <label {{bindAttr for="firstNameField.elementId"}}>First Name</label>
+      <label>Username</label>
+      {{view Ember.TextField valueBinding='username' name='username' viewName='userNameField'}}
+    </div>
+
+    <div>
+      <label>First Name</label>
       {{view Ember.TextField valueBinding='firstName' name='first_name' viewName='firstNameField'}}
     </div>
     <div>

@@ -5,7 +5,12 @@
         <ul class='nav'>
           <li {{bindAttr class="isHome:active"}}>{{#linkTo 'index'}}Home{{/linkTo}}</li>
           <li {{bindAttr class="isUsers:active"}}>{{#linkTo 'users'}}Users{{/linkTo}}</li>
-          <li {{bindAttr class="isUsers:active"}}>{{#linkTo 'achievements'}}Achievements{{/linkTo}}</li>
+          <li {{bindAttr class="isAchievements:active"}}>{{#linkTo 'achievements'}}Achievements{{/linkTo}}</li>
+          {{#if session.isAuthenticated}}
+          <li><a style="cursor: pointer" {{ action 'logout' }}>Logout</a></li>
+          {{else}}
+          <li><a style="cursor: pointer" {{ action 'login' }}>Login</a></li>
+          {{/if}}
         </ul>
       </div>
     </div>
@@ -15,6 +20,11 @@
   <div class='content'>
     <div class='row'>
       <div class='span12'>
+        {{#view App.FlashView id="flash-view"}}
+          <div id="message">
+            {{view.content.message}}
+          </div>
+        {{/view}}
         <div class='page-header'></div>
         {{outlet}}
       </div>

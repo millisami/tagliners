@@ -31,3 +31,9 @@ group :development do
   gem 'quiet_assets'
   gem 'qunit-rails'
 end
+
+gem 'sorcery'
+
+group :development, :test do
+  gem 'pry-rails'
+end
