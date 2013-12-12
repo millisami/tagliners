@@ -1,6 +1,8 @@
 
-App.AchievementsRoute = Ember.Route.extend
+App.AchievementsRoute = Ember.Route.extend(Ember.SimpleAuth.AuthenticatedRouteMixin)
+
+App.AchievementsRoute.reopen
   model: ->
     App.Achievement.find()
 
-App.AchievementsRoute = Ember.Route.extend(Ember.SimpleAuth.AuthenticatedRouteMixin)
+

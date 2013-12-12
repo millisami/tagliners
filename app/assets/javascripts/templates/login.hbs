@@ -1,8 +1,9 @@
 
-<form {{action login on='submit'}}>
+<form class="form inline" {{action login on='submit'}}>
+  <h2>Log In</h2>
   <label for="identification">Login</label>
-  {{view Ember.TextField id='identification' valueBinding='identification' placeholder='Enter Login'}}
+  {{input value=identification type="text" id='identification' placeholder='Enter Login'}}
   <label for="password">Password</label>
-  {{view Ember.TextField id='password' type='password' valueBinding='password' placeholder='Enter Password'}}
-  <button type="submit">Login</button>
+  {{input value=password type="text" id='password' placeholder='Enter Password'}}
+  <p>{{input value="Login" type="submit" class="btn"}}</p>
 </form>

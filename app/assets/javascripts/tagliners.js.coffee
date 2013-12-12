@@ -16,7 +16,6 @@ Ember.Application.initializer
 
 App.Router.map ->
   @route 'login'
-  # @route 'logout'
 
 App.ApplicationRoute = Ember.Route.extend(Ember.SimpleAuth.ApplicationRouteMixin)
 App.LoginController = Ember.Controller.extend(Ember.SimpleAuth.LoginControllerMixin)

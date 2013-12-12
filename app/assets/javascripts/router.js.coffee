@@ -17,7 +17,8 @@ App.IndexRoute = Ember.Route.extend
   setupController: (controller, model) ->
     @controllerFor('application').set('currentRoute', 'home')
 
-App.UsersRoute = Ember.Route.extend
+App.UsersRoute = Ember.Route.extend(Ember.SimpleAuth.AuthenticatedRouteMixin)
+App.UsersRoute.reopen
   model: ->
     App.User.find()
   setupController: (controller, model) ->
